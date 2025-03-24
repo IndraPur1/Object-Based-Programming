@@ -1,21 +1,21 @@
 import java.time.LocalDate;
 
 public class Petani extends Manusia implements Pajak {
-    private String nik;
+    private String asal_kota;
     private static int CounterPetani = 0;
 
-    public Petani(String nama, String tgl_mulai_kerja, String alamat, double pendapatan, String nik){
+    public Petani(String nama, String tgl_mulai_kerja, String alamat, double pendapatan, String asal_kota){
         super(nama, tgl_mulai_kerja, alamat, pendapatan);
-        this.nik = nik;
+        this.asal_kota = asal_kota;
         CounterPetani++;
     }
 
-    public void setNik(String nik){
-        this.nik = nik;
+    public void setAsalKota(String asal_kota){
+        this.asal_kota = asal_kota;
     }
 
-    public String getNik(){
-        return nik;
+    public String getAsalKota(){
+        return asal_kota;
     }
 
     public static int getCounterPetani(){
@@ -23,7 +23,7 @@ public class Petani extends Manusia implements Pajak {
     }
 
     public double hitungPajak(){
-        return getPendapatan() * 0.15;
+        return 0;
     }
 
     public double hitungMasaKerja(){
@@ -34,6 +34,6 @@ public class Petani extends Manusia implements Pajak {
     @Override
     public void cetakInfo(){
         super.cetakInfo();
-        System.out.println("NIK: " + getNik());
+        System.out.println("Asal Kora: " + getAsalKota());
     }
 }
