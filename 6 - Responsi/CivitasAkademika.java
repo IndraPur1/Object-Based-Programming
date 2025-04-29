@@ -28,6 +28,5 @@ abstract class CivitasAkademika {
     public static int getCounter() {
         return counter;
     }
-
     public abstract void tampilkanInformasi();
 }
